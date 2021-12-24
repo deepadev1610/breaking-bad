@@ -13,7 +13,7 @@ const Character = ({item}) => {
 
                     <ul>
                         <li>
-                            <strong>Actor Name:</strong> {item.potrayed}
+                            <strong>Actor Name:</strong> {item.portrayed}
                         </li>
                     </ul>
 
