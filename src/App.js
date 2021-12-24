@@ -14,9 +14,10 @@ const App = () => {
   const [offset, setOffset] = useState(0);
 
   useEffect(() => {
-    if (text) { setOffset(null);}
+    let query = '';
+    if (!text) { query=`&limit=10&offset=${offset}`;}
     const fetchData = async () => {
-      const res = await axios(`https://www.breakingbadapi.com/api/characters?name=${text}&limit=10&offset=${offset}`);
+      const res = await axios(`https://www.breakingbadapi.com/api/characters?name=${text}${query}`);
 
       setItems(res.data);
       setIsLoading(false)
